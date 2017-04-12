@@ -385,10 +385,7 @@ class Definition(object):
         if not getattr(self.wsdl.transport, 'supports_async', False):
             from zeep.wsdl import bindings
             binding_classes = [
-                bindings.Soap11Binding,
-                bindings.Soap12Binding,
-                bindings.HttpGetBinding,
-                bindings.HttpPostBinding,
+                bindings.Soap12Binding
             ]
         else:
             from zeep.asyncio import bindings  # Python 3.5+ syntax
